@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   base: '/geneformer-atlas/',
   build: {
-    chunkSizeWarningLimit: 2000,
+    chunkSizeWarningLimit: 5000,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -13,5 +13,8 @@ export default defineConfig({
         },
       },
     },
+  },
+  define: {
+    global: 'globalThis',
   },
 })
